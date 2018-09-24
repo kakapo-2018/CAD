@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Question from './Question'
 import {connect} from 'react-redux'
-import {updateJudge, updatePlayerTurn} from '../actions/index'
+import {updateJudge, updatePlayerTurn, clearFunny} from '../actions/index'
 import {bindActionCreators} from 'redux'
 
 class EndRound extends Component {
@@ -65,7 +65,9 @@ class EndRound extends Component {
 <Link to={`/startround`}><button type="button" className="btn btn-secondary" 
 
 onClick={() => {
-  this.props.dispatch(updateJudge(selected)); this.props.dispatch(updatePlayerTurn((selected%this.props.players)+1))} }
+  this.props.dispatch(updateJudge(selected)); this.props.dispatch(updatePlayerTurn((selected%this.props.players)+1));
+  this.props.dispatch(clearFunny())
+} }
 
 >Select Winner</button></Link>
 
