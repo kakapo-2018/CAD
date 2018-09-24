@@ -1,12 +1,19 @@
 import React from 'react'
 
-import Words from './Words'
-import AddWord from './AddWord'
+import Login from './Login'
+import PlayerHand from './PlayerHand'
+import StartGame from './StartGame'
+import EndRound from './EndRound'
+
+
 
 const App = () => (
   <div className='app-container'>
-    <Words />
-    <AddWord />
+<Login />
+  <StartGame />
+  <PlayerHand />
+  <EndRound />
+  
   </div>
 )
 
