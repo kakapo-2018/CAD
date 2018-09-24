@@ -31,6 +31,7 @@ class PlayerHand extends Component {
     <label for="answer1">Goat Sacrifices</label></ul>
     <ul><input type='radio' name='answer' value='' id='' />
     <label for="answer1">Harrison</label></ul>
+    
     <Link to={`/playerready`}><button type="button" className="btn btn-secondary">Submit</button></Link>
 
     if last round go to 
