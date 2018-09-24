@@ -84,8 +84,8 @@ As a user, I want to be able to:
 * UPDATE_PLAYER_TURN
 
 ## QUESTIONS
-* SELECT_QUESTION
-* UPDATE_DEALT_QUESTIONS
+* SELECT_QUESTION - done!
+* X UPDATE_DEALT_QUESTIONS - added to select question since it always happens at the same time
 
 ## ANSWERS
 * FILL_ANSWERS_HANDS
