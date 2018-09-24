@@ -42,7 +42,7 @@ As a user, I want to be able to:
 ### Players
 
 ``` 
-"Numbers of Players" : 5
+"Numbers of Players" : 6
 
 "Current Judge" : "Player 1"
 
