@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import {selectQuestion} from '../actions/index'
+import {bindActionCreators} from 'redux'
 
 class StartGame extends Component {
   constructor(props) {
@@ -7,6 +10,7 @@ class StartGame extends Component {
     this.state = {  }
   }
   render() { 
+    console.log(this.props.questions)
     return ( 
     <div>
      <div class="alert alert-dark alert-warning alert-dismissible fade show" role="alert">
@@ -15,14 +19,37 @@ class StartGame extends Component {
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-      <h1>Select Players</h1>
-      <p>Pick number of players</p>
+<div class="select-players">
+      <h1>How many are in?</h1>
+      <p>Enter player number</p>
+    <label for="player-number">Players</label>
+    <select class="player-number" id="player-number">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    </div>
 
-<Link to={`/playerready`}><button type="button" className="btn btn-secondary">Start</button></Link>
+<Link to={`/playerready`}><button 
+type="button" 
+className="btn btn-secondary"
+onClick={this.props.selectQuestion}>Start</button></Link>
       
     </div> 
     );
   }
 }
  
-export default StartGame;
+function mapStateToProps(state) {
+  return {
+    questions: state.questions
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({selectQuestion:selectQuestion}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(StartGame) ;

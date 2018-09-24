@@ -1,7 +1,11 @@
 import {combineReducers} from 'redux'
 
-import words from './words'
+import questions from './questions'
+// import answers from './answers'
+// import players from './players'
 
 export default combineReducers({
-  words
+  questions,
+  // answers,
+  // players
 })
