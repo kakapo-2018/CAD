@@ -16,7 +16,6 @@ const questions = (state = initialState, action) => {
           currentQuestion: selectedQuestion,
           dealtQuestions: [...state.dealtQuestions, selectedQuestion]
         })
-
     default:
       return state
   }
