@@ -1,15 +1,17 @@
 
+
 const initialState =        
 { 
-  numOfPlayers: 0
+  numOfPlayers: 0,
+  activeJudge: 1
 }
 
 const players = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_NUMBER_OF_PLAYERS': 
-      return ({
-        numOfPlayers: action.number
-      })
+      return { ...state, numOfPlayers: action.number}
+    case 'UPDATE_JUDGE':
+      return { ...state, activeJudge: action.judge}
 
     default:
       return state 
