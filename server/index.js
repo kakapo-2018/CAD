@@ -1,6 +1,6 @@
 var server = require('./server')
 
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 3001
 
 server.listen(port, function () {
   // eslint-disable-next-line no-console
