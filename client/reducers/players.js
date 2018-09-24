@@ -2,7 +2,7 @@
 
 const initialState =        
 { 
-  numOfPlayers: 0,
+  numOfPlayers: 5,
   currentJudge: 1,
   currentPlayersTurn: 2
 }
