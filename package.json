@@ -10,6 +10,9 @@
   "author": "EDA",
   "license": "ISC",
   "babel": {
+    "plugins": [
+      "transform-object-rest-spread"
+    ],
     "presets": [
       "env",
       "react"
@@ -29,6 +32,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "express": "^4.16.2",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
