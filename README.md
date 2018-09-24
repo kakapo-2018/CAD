@@ -42,39 +42,40 @@ As a user, I want to be able to:
 ### Players
 
 ``` 
-"Numbers of Players" : 6
-
-"Current Judge" : "Player 1"
-
-"Current Player's Turn" : "Player 2"
+{
+  "Numbers of Players" : 6,
+  "Current Judge" : "Player 1",
+  "Current Player's Turn" : "Player 2"
+}
 
 ```
 ### Questions
 
 ```
-"Current Question" : "what's the deal with airline food?"
-
-"Previous Questions" : ["What's up?","How's it?"]
+{
+  "Current Question" : "what's the deal with airline food?",
+  "Previous Questions" : ["What's up?","How's it?"]
+}
 ```
 ### Answers
 ```
-"Hand" : [
+{
+  "Hand" : [
   {
     "Player" : 2
     "Cards" : ["first one" , "second one"]
     "Selected" : "Third one"
   }
-]
-
-"Dealt Cards" : ["Negative one", "Negative two"]
-
-"To Be Judged" : [
-  {
-    "Player" : 1,
-    "Card Text" : "Things"
-  }
-]
-
+    ],
+  "Dealt Cards" : ["Negative one", "Negative two"],
+  "To Be Judged" : [
+    {
+      "Player" : 1,
+      "Card Text" : "Things"
+    }
+  ]
+}
+```
 
 
 
