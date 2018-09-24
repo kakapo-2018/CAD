@@ -32,9 +32,19 @@ export const selectQuestion = () => {
 
 
 ///ANSWERS
-export const fillAnswersHands = (playerCount) => {
+export const fillAnswersHands = (playernum, newCards) => {
   return {
     type: 'FILL_ANSWERS_HANDS',
-    playerCount: playerCount
+    player: playernum,
+    cards: newCards
   }
 }
+
+export const selectFunny = (playernum, selectText) => {
+  return {
+    type: 'FILL_ANSWERS_HANDS',
+    player: playernum,
+    cards: selectText
+  }
+}
+
