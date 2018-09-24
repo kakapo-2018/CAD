@@ -15,6 +15,13 @@ export const updateJudge = (newJudgeId) => {
   }
 }
 
+export const updatePlayerTurn = (newPlayer) => {
+  return {
+    type: 'UPDATE_PLAYER_TURN',
+    judge: newPlayer
+  }
+}
+
 
 ///QUESTIONS
 export const selectQuestion = () => {

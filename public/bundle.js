@@ -24854,7 +24854,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var initialState = {
   numOfPlayers: 0,
-  activeJudge: 1
+  currentJudge: 1,
+  currentPlayersTurn: 2
 };
 
 var players = function players() {
@@ -24865,8 +24866,9 @@ var players = function players() {
     case 'SET_NUMBER_OF_PLAYERS':
       return _extends({}, state, { numOfPlayers: action.number });
     case 'UPDATE_JUDGE':
-      return _extends({}, state, { activeJudge: action.judge });
-
+      return _extends({}, state, { currentJudge: action.judge });
+    case 'UPDATE_JUDGE':
+      return _extends({}, state, { currentPlayersTurn: action.judge });
     default:
       return state;
   }
