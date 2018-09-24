@@ -1,9 +1,7 @@
-let nextWordId = 0
 
-export const addWord = (word) => {
+export const selectQuestion = () => {
   return {
-    type: 'ADD_WORD',
-    id: nextWordId++,
-    word
+    type: 'SELECT_QUESTION'
   }
 }
+
