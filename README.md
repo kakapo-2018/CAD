@@ -82,18 +82,18 @@ As a user, I want to be able to:
 
 ### PLAYERS
 * SET_NUMBER_OF_PLAYERS - done!
-* UPDATE_JUDGE - DONE
-* UPDATE_PLAYER_TURN - DONE
+* UPDATE_JUDGE - done
+* UPDATE_PLAYER_TURN - done
 
 ## QUESTIONS
 * SELECT_QUESTION - done!
 * X UPDATE_DEALT_QUESTIONS - added to select question since it always happens at the same time
 
 ## ANSWERS
-* FILL_ANSWERS_HANDS
-* SELECT_ANSWER
-* CLEAR_SELECTED_ANSWER
-* UPDATE_DEALT_ANSWERS
+* FILL_ANSWERS_HANDS - dOnE! - kind of, need to rejig our rules, will explain in the morning
+* SELECT_ANSWER - done
+* CLEAR_SELECTED_ANSWER -done
+* XXX UPDATE_DEALT_ANSWERS XXX - not needed as part of the rule rejig, will explain in morning
 
 ## AUTH
 
