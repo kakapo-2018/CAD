@@ -48,7 +48,7 @@ onClick={this.props.selectQuestion}>Start</button></Link>
 }
 
 function setPlayers () {
-  
+  console.log('fsdf', playerNumber)
   let playerNumber = document.getElementById['player-number'].value;
   console.log('p', playerNumber)
   

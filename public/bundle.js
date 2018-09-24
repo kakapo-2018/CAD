@@ -28467,7 +28467,7 @@ var StartGame = function (_Component) {
 }(_react.Component);
 
 function setPlayers() {
-
+  console.log('fsdf', playerNumber);
   var playerNumber = document.getElementById['player-number'].value;
   console.log('p', playerNumber);
 }
