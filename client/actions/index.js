@@ -1,9 +1,5 @@
 
-export const selectQuestion = () => {
-  return {
-    type: 'SELECT_QUESTION'
-  }
-}
+///PLAYERS
 
 export const setNumberOfPlayers = (total) => {
   return {
@@ -12,6 +8,30 @@ export const setNumberOfPlayers = (total) => {
   }
 }
 
+export const updateJudge = (newJudgeId) => {
+  return {
+    type: 'UPDATE_JUDGE',
+    judge: newJudgeId
+  }
+}
+
+export const updatePlayerTurn = (newPlayer) => {
+  return {
+    type: 'UPDATE_PLAYER_TURN',
+    newTurn: newPlayer
+  }
+}
+
+
+///QUESTIONS
+export const selectQuestion = () => {
+  return {
+    type: 'SELECT_QUESTION'
+  }
+}
+
+
+///ANSWERS
 export const fillAnswersHands = (playerCount) => {
   return {
     type: 'FILL_ANSWERS_HANDS',
