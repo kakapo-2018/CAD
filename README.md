@@ -58,20 +58,23 @@ As a user, I want to be able to:
 ### Answers
 ```
 {
-  "hand" : [
-  {
-    "player" : 2
-    "cards" : ["" , ""]
-    "selected" : ""
-  }
-    ],
-  "dealtCards" : ["", ""],
-  "toBeJudged" : [
+  numOfPlayers: 5,
+  playerHand: [
     {
-      "player" : 1,
-      "cardText" : ""
+      player: null,
+      answerCards: [
+        "",
+        ""
+      ]
     }
   ]
+  dealtCards: ["", ""],
+  toBeJudged: [
+    {
+      "player" : null,
+      "cardText" : ""
+    }
+  ]  
 }
 ```
 
