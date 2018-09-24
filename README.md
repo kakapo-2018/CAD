@@ -40,42 +40,61 @@ As a user, I want to be able to:
 ## Reducer States
 
 ### Players
-
 ``` 
 {
-  "Numbers of Players" : 6,
-  "Current Judge" : "Player 1",
-  "Current Player's Turn" : "Player 2"
+  "numbersOfPlayers" : 6,               // from SET_NUMBER_OF_PLAYERS
+  "currentJudge" : "Player 1",          //default initial state
+  "currentPlayersTurn" : "Player 2"     //default
 }
-
 ```
 ### Questions
-
 ```
 {
-  "Current Question" : "what's the deal with airline food?",
-  "Previous Questions" : ["What's up?","How's it?"]
+  "currentQuestion" : "",
+  "dealtQuestions" : ["",""]
 }
 ```
+
 ### Answers
 ```
 {
-  "Hand" : [
+  "hand" : [
   {
-    "Player" : 2
-    "Cards" : ["first one" , "second one"]
-    "Selected" : "Third one"
+    "player" : 2
+    "cards" : ["" , ""]
+    "selected" : ""
   }
     ],
-  "Dealt Cards" : ["Negative one", "Negative two"],
-  "To Be Judged" : [
+  "dealtCards" : ["", ""],
+  "toBeJudged" : [
     {
-      "Player" : 1,
-      "Card Text" : "Things"
+      "player" : 1,
+      "cardText" : ""
     }
   ]
 }
 ```
 
 
+## Actions
+bracketed numbers indicate rough sequence
+
+### PLAYERS
+* SET_NUMBER_OF_PLAYERS (1)
+* UPDATE_JUDGE (6)
+* UPDATE_PLAYER_TURN (5)&(6)
+
+## QUESTIONS
+* SELECT_QUESTION (3)
+* UPDATE_DEALT_QUESTIONS (2)
+
+## ANSWERS
+* FILL_ANSWERS_HANDS (2)
+changes hand cards
+* SELECT_ANSWER (4)
+changes toBeJudged card text
+* CLEAR_SELECTED_ANSWER (6)
+* UPDATE_DEALT_ANSWERS (2)
+
+## AUTH
 
