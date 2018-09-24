@@ -1,4 +1,4 @@
-import cards from '../../server/db.json'
+// import cards from '../../server/db.json'
 // const answerCards = cards.whiteCards
 
 const initialState =        
@@ -7,9 +7,6 @@ const initialState =
   dealtCards: [],
   toBeJudged: []
 }
-
-
-
 
 const answers = (state = initialState, action) => {
   switch (action.type) {

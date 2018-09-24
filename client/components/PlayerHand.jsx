@@ -9,15 +9,17 @@ class PlayerHand extends Component {
     super(props);
     this.state = { array: ['hi', 'this', 'is', 'Emil'] }
   }
-  render() { 
-    console.log(this.props)
+  render() {
+    // let thisPlayer = this.props.players.currentPlayersTurn
+    // console.log(thisPlayer)
+    // console.log(this.props.answers.PlayerHand)
 
     return ( 
     
 
       
     <div>
-       <div class="alert alert-dark alert-warning alert-dismissible fade show" role="alert">
+       <div className="alert alert-dark alert-warning alert-dismissible fade show" role="alert">
   <strong>Take your pick</strong> Then pass to next player
   <button type="button" className="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
@@ -50,7 +52,8 @@ class PlayerHand extends Component {
 
 function mapStateToProps(state){
   return {
-    players: (state.players)
+    players: (state.players),
+    answers: (state.answers)
   }
 }
 
