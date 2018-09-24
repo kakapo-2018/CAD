@@ -24842,6 +24842,10 @@ var answers = function answers() {
       return _extends({}, state, {
         toBeJudged: [].concat(_toConsumableArray(state.toBeJudged), [{ player: action.player, cardText: action.selectText }])
       });
+    case 'CLEAR_SELECTED_ANSWERS':
+      return _extends({}, state, {
+        toBeJudged: []
+      });
     default:
       return state;
   }

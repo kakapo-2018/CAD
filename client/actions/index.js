@@ -48,3 +48,9 @@ export const selectFunny = (playernum, cardText) => {
   }
 }
 
+export const selectFunny = () => {
+  return {
+    type: 'CLEAR_SELECTED_ANSWERS'
+  }
+}
+

@@ -23,6 +23,11 @@ const answers = (state = initialState, action) => {
         ...state, 
         toBeJudged: [...state.toBeJudged, {player: action.player, cardText:action.selectText}]
       }
+    case 'CLEAR_SELECTED_ANSWERS':
+      return {
+        ...state, 
+        toBeJudged: []
+      }
     default:
       return state 
   }
