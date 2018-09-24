@@ -42,9 +42,9 @@ As a user, I want to be able to:
 ### Players
 ``` 
 {
-  "numbersOfPlayers" : 6,               // from SET_NUMBER_OF_PLAYERS
-  "currentJudge" : "Player 1",          //default initial state
-  "currentPlayersTurn" : "Player 2"     //default
+  numOfPlayers: 5,
+  currentJudge : "Player 1",
+  currentPlayersTurn : "Player 2"
 }
 ```
 ### Questions
@@ -58,7 +58,6 @@ As a user, I want to be able to:
 ### Answers
 ```
 {
-  numOfPlayers: 5,
   playerHand: [
     {
       player: null,
@@ -82,7 +81,7 @@ As a user, I want to be able to:
 ## Actions
 
 ### PLAYERS
-* SET_NUMBER_OF_PLAYERS
+* SET_NUMBER_OF_PLAYERS - done!
 * UPDATE_JUDGE
 * UPDATE_PLAYER_TURN
 
