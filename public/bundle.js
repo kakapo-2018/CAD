@@ -24840,7 +24840,7 @@ var answers = function answers() {
       });
     case 'SELECT_ANSWER':
       return _extends({}, state, {
-        playerHand: [].concat(_toConsumableArray(state.playerHand), [{ player: action.player, answerCards: action.cards }])
+        toBeJudged: [].concat(_toConsumableArray(state.toBeJudged), [{ player: action.player, cardText: action.selectText }])
       });
     default:
       return state;

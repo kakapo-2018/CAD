@@ -21,7 +21,7 @@ const answers = (state = initialState, action) => {
     case 'SELECT_ANSWER':
       return {
         ...state, 
-        playerHand: [...state.playerHand, {player: action.player, answerCards:action.cards}]
+        toBeJudged: [...state.toBeJudged, {player: action.player, cardText:action.selectText}]
       }
     default:
       return state 

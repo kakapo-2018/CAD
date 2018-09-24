@@ -40,11 +40,11 @@ export const fillAnswersHands = (playernum, newCards) => {
   }
 }
 
-export const selectFunny = (playernum, selectText) => {
+export const selectFunny = (playernum, cardText) => {
   return {
-    type: 'FILL_ANSWERS_HANDS',
+    type: 'SELECT_ANSWER',
     player: playernum,
-    cards: selectText
+    selectText: cardText
   }
 }
 
