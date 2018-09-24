@@ -37,7 +37,7 @@ As a user, I want to be able to:
 * Select winner (judge view)
 * Win screen
 
-## Reducers
+## Reducer States
 
 ### Players
 
