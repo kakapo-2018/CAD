@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-react-redux",
+  "name": "CAD",
   "version": "0.2.0",
   "description": "React Redux using express",
   "main": "server/index.js",
@@ -15,11 +15,13 @@
     ],
     "presets": [
       "env",
-      "react"
+      "react",
+      "stage-0"
     ]
   },
   "devDependencies": {
-    "nodemon": "^1.14.12"
+    "nodemon": "^1.14.12",
+    "sqlite3": "^4.0.2"
   },
   "dependencies": {
     "express": "^4.16.2",
@@ -31,6 +33,21 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "webpack": "^3.11.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.3",
+    "dotenv": "^6.0.0",
+    "express-jwt": "^5.3.0",
+    "jsdom": "^11.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "jsx-loader": "^0.13.2",
+    "jwt-decode": "^2.2.0",
+    "knex": "^0.13.0",
+    "passport": "^0.4.0",
+    "pg": "^6.2.3",
+    "sodium": "^2.0.3",
     "webpack-dev-server": "^2.11.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
