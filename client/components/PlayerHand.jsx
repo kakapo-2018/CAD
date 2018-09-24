@@ -15,24 +15,24 @@ class PlayerHand extends Component {
 
       
     <div>
-       <div class="alert alert-dark alert-warning alert-dismissible fade show" role="alert">
+       <div className="alert alert-dark alert-warning alert-dismissible fade show" role="alert">
   <strong>Take your pick</strong> Then pass to next player
   <button type="button" className="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-      <Question />
 
-          <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Smegma</label></ul>
-    <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Laying an egg</label></ul>
-    <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Cuddling</label></ul>
-    <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Goat Sacrifices</label></ul>
-    <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Harrison</label></ul>
+    <Question />
+      <ul><input type='radio' name='answer' value='' id='' />
+        <label id="answer1">SmegmaR</label></ul>
+      <ul><input type='radio' name='answer' value='' id='' />
+        <label id="answer2">Laying an egg</label></ul>
+      <ul><input type='radio' name='answer' value='' id='' />
+        <label id="answer3">Cuddling</label></ul>
+      <ul><input type='radio' name='answer' value='' id='' />
+        <label id="answer4">Goat Sacrifices</label></ul>
+      <ul><input type='radio' name='answer' value='' id='' />
+        <label id="answer5">Harrison</label></ul>
 
     {(this.props.players.currentPlayersTurn%this.props.players.numOfPlayers != this.props.players.currentJudge - 1) && 
     <Link to={`/playerready`}><button type="button" className="btn btn-secondary" onClick={()=> this.props.dispatch(updatePlayerTurn(
