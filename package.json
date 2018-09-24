@@ -10,6 +10,9 @@
   "author": "EDA",
   "license": "ISC",
   "babel": {
+    "plugins": [
+      "transform-object-rest-spread"
+    ],
     "presets": [
       "env",
       "react",
@@ -17,27 +20,25 @@
     ]
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
     "nodemon": "^1.14.12",
+    "sqlite3": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
-    "sqlite3": "^4.0.2",
     "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1"
-  },
-  "dependencies": {
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
     "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.3",
     "dotenv": "^6.0.0",
-    "express": "^4.16.2",
     "express-jwt": "^5.3.0",
     "jsdom": "^11.0.0",
     "jsonwebtoken": "^8.3.0",
@@ -46,6 +47,11 @@
     "knex": "^0.13.0",
     "passport": "^0.4.0",
     "pg": "^6.2.3",
-    "sodium": "^2.0.3"
+    "sodium": "^2.0.3",
+    "webpack-dev-server": "^2.11.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
   }
 }
