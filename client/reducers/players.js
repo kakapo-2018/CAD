@@ -13,8 +13,8 @@ const players = (state = initialState, action) => {
       return { ...state, numOfPlayers: action.number}
     case 'UPDATE_JUDGE':
       return { ...state, currentJudge: action.judge}
-    case 'UPDATE_JUDGE':
-      return { ...state, currentPlayersTurn: action.judge}
+    case 'UPDATE_PLAYER_TURN':
+      return { ...state, currentPlayersTurn: action.newTurn}
     default:
       return state 
   }

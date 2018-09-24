@@ -24867,8 +24867,8 @@ var players = function players() {
       return _extends({}, state, { numOfPlayers: action.number });
     case 'UPDATE_JUDGE':
       return _extends({}, state, { currentJudge: action.judge });
-    case 'UPDATE_JUDGE':
-      return _extends({}, state, { currentPlayersTurn: action.judge });
+    case 'UPDATE_PLAYER_TURN':
+      return _extends({}, state, { currentPlayersTurn: action.newTurn });
     default:
       return state;
   }
