@@ -9,7 +9,10 @@ class PlayerHand extends Component {
     super(props);
     this.state = {  }
   }
-  render() { 
+  render() {
+    // let thisPlayer = this.props.players.currentPlayersTurn
+    // console.log(thisPlayer)
+    // console.log(this.props.answers.PlayerHand)
     return ( 
     
 
@@ -51,7 +54,8 @@ class PlayerHand extends Component {
 
 function mapStateToProps(state){
   return {
-    players: (state.players)
+    players: (state.players),
+    answers: (state.answers)
   }
 }
 

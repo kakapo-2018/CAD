@@ -25,10 +25,10 @@ class PlayerReady extends Component {
     for (let i = 0; i < 4; i++) {
       let randomNumber = Math.floor((Math.random() * answerCards.length) + 1);
       let thisCard = answerCards[randomNumber]
-      console.log(thisCard)
+      // console.log(thisCard)
       thisHand.push(thisCard)
     }
-    console.log("thisHand", thisHand)
+    // console.log("thisHand", thisHand)
 
     this.props.fillAnswersHands(this.props.players.currentPlayersTurn, thisHand)
   }}>Let's Go</button></Link>
