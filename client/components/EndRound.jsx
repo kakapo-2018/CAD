@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import Question from './Question'
 
 class EndRound extends Component {
@@ -18,9 +19,13 @@ class EndRound extends Component {
 </div>
   <Question />
 
-answers 1 hidden
-answers 2 hidden
-<button onClick> Submit </button>
+<ul>answers 1 hidden</ul>
+<ul>answers 2 hidden</ul>
+<ul>answers 3 hidden</ul>
+<ul>answers 4 hidden</ul>
+<ul>answers 5 hidden</ul>
+<Link to={`/startround`}><button type="button" className="btn btn-secondary">The winner is...</button></Link>
+
 
 </div>
 
