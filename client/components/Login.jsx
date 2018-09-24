@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component  } from 'react';
+import {Link} from 'react-router-dom';
+
 
 class Login extends Component {
   constructor(props) {
@@ -7,7 +9,10 @@ class Login extends Component {
   }
   render() { 
     return (
-      <div>Login</div>
+      <div>Login
+
+        <Link to={`/startgame`}><button type="button" className="btn btn-secondary">Submit</button></Link>
+      </div>
      );
   }
 }

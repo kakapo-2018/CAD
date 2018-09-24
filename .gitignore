@@ -1,4 +1,8 @@
 node_modules
-package-lock.jsons
+static
+npm-debug.log
+dev.sqlite3
+bundle.js
+bundle.js.map
 .env
 yarn.lock
