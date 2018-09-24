@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import Question from './Question'
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
-import { updatePlayerTurn } from '../actions';
+import { updatePlayerTurn, selectFunny } from '../actions';
 
 class PlayerHand extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = { array: ['hi', 'this', 'is', 'Emil'] }
   }
   render() { 
+    console.log(this.props)
+
     return ( 
     
 
@@ -21,18 +23,15 @@ class PlayerHand extends Component {
     <span aria-hidden="true">&times;</span>
   </button>
 </div>
-      <Question />
 
-          <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Smegma</label></ul>
-    <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Laying an egg</label></ul>
-    <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Cuddling</label></ul>
-    <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Goat Sacrifices</label></ul>
-    <ul><input type='radio' name='answer' value='' id='' />
-    <label for="answer1">Harrison</label></ul>
+      <Question />
+{this.state.array.length>0 && this.state.array.map(words => {
+            return <ul><input type='radio' name={words} value={this.props.players.currentPlayersTurn}id='' onClick={(e) => this.props.dispatch(selectFunny(e.target.value, e.target.name))} />
+    <label for="answer1">{words}</label></ul>
+})}
+
+   
+
 
     {(this.props.players.currentPlayersTurn%this.props.players.numOfPlayers != this.props.players.currentJudge - 1) && 
     <Link to={`/playerready`}><button type="button" className="btn btn-secondary" onClick={()=> this.props.dispatch(updatePlayerTurn(
