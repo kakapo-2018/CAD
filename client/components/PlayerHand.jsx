@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Question from './Question'
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { updatePlayerTurn } from '../actions';
 
 class PlayerHand extends Component {
   constructor(props) {
@@ -31,14 +33,26 @@ class PlayerHand extends Component {
     <label for="answer1">Goat Sacrifices</label></ul>
     <ul><input type='radio' name='answer' value='' id='' />
     <label for="answer1">Harrison</label></ul>
-    <Link to={`/playerready`}><button type="button" className="btn btn-secondary">Submit</button></Link>
 
-    if last round go to 
-    <Link to={`/endround`}><button type="button" className="btn btn-secondary">End Round</button></Link>
+    {(this.props.players.currentPlayersTurn%this.props.players.numOfPlayers != this.props.players.currentJudge - 1) && 
+    <Link to={`/playerready`}><button type="button" className="btn btn-secondary" onClick={()=> this.props.dispatch(updatePlayerTurn(
+      ((this.props.players.currentPlayersTurn)%(this.props.players.numOfPlayers))+1)
+    )}>Submit</button></Link>}
+
+    {(this.props.players.currentPlayersTurn%this.props.players.numOfPlayers == this.props.players.currentJudge - 1) && 
+    <Link to={`/endround`}><button type="button" className="btn btn-secondary" onClick={()=> this.props.dispatch(updatePlayerTurn(
+      ((this.props.players.currentPlayersTurn)%(this.props.players.numOfPlayers))+1)
+    )}>End Round</button></Link>}
     </div> 
     
   );
   }
 }
- 
-export default PlayerHand;
+
+function mapStateToProps(state){
+  return {
+    players: (state.players)
+  }
+}
+
+export default connect(mapStateToProps)(PlayerHand);
