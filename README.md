@@ -40,42 +40,60 @@ As a user, I want to be able to:
 ## Reducer States
 
 ### Players
-
 ``` 
 {
-  "Numbers of Players" : 6,
-  "Current Judge" : "Player 1",
-  "Current Player's Turn" : "Player 2"
+  numOfPlayers: 5,
+  currentJudge : "Player 1",
+  currentPlayersTurn : "Player 2"
 }
-
 ```
 ### Questions
-
 ```
 {
-  "Current Question" : "what's the deal with airline food?",
-  "Previous Questions" : ["What's up?","How's it?"]
+  "currentQuestion" : "",
+  "dealtQuestions" : ["",""]
 }
 ```
+
 ### Answers
 ```
 {
-  "Hand" : [
-  {
-    "Player" : 2
-    "Cards" : ["first one" , "second one"]
-    "Selected" : "Third one"
-  }
-    ],
-  "Dealt Cards" : ["Negative one", "Negative two"],
-  "To Be Judged" : [
+  playerHand: [
     {
-      "Player" : 1,
-      "Card Text" : "Things"
+      player: null,
+      answerCards: [
+        "",
+        ""
+      ]
     }
   ]
+  dealtCards: ["", ""],
+  toBeJudged: [
+    {
+      "player" : null,
+      "cardText" : ""
+    }
+  ]  
 }
 ```
 
 
+## Actions
+
+### PLAYERS
+* SET_NUMBER_OF_PLAYERS - done!
+* UPDATE_JUDGE - done
+* UPDATE_PLAYER_TURN - done
+
+## QUESTIONS
+* SELECT_QUESTION - done!
+* X UPDATE_DEALT_QUESTIONS - added to select question since it always happens at the same time
+
+## ANSWERS
+* FILL_ANSWERS_HANDS - dOnE! - kind of, need to rejig our rules, will explain in the morning
+* SELECT_ANSWER - done
+* CLEAR_SELECTED_ANSWER -done
+* XXX UPDATE_DEALT_ANSWERS XXX - not needed as part of the rule rejig, will explain in morning
+
+## AUTH
 
