@@ -7,16 +7,17 @@ import { updatePlayerTurn, selectFunny } from '../actions';
 class PlayerHand extends Component {
   constructor(props) {
     super(props);
-    this.state = { array: ['hi', 'this', 'is', 'Emil'] }
+    this.state = { }
   }
   render() {
-    // let thisPlayer = this.props.players.currentPlayersTurn
+    console.log('hi', this.props.cards[0].answerCards);
+    let thisPlayer = this.props.players.currentPlayersTurn
     // console.log(thisPlayer)
-    // console.log(this.props.answers.PlayerHand)
+    
 
     return ( 
     
-
+      
       
     <div>
        <div className="alert alert-dark alert-warning alert-dismissible fade show" role="alert">
@@ -27,10 +28,12 @@ class PlayerHand extends Component {
 </div>
 
       <Question />
-{this.state.array.length>0 && this.state.array.map(words => {
-            return <ul><input type='radio' name={words} value={this.props.players.currentPlayersTurn}id='' onClick={(e) => this.props.dispatch(selectFunny(e.target.value, e.target.name))} />
-    <label for="answer1">{words}</label></ul>
-})}
+
+
+{this.props.cards[0].answerCards.map(words => {
+  return <ul><input type='radio' name={words} value={this.props.players.currentPlayersTurn}id='' onClick={(e) => this.props.dispatch(selectFunny(e.target.value, e.target.name))} />
+ <label for="answer1">{words}</label></ul>
+ })}
 
    
 
@@ -53,7 +56,8 @@ class PlayerHand extends Component {
 function mapStateToProps(state){
   return {
     players: (state.players),
-    answers: (state.answers)
+    answers: (state.answers),
+    cards: state.answers.playerHand
   }
 }
 
