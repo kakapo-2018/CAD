@@ -7,11 +7,12 @@ import {bindActionCreators} from 'redux'
 import cards from '../../server/db.json'
 const answerCards = cards.whiteCards
 
+import Logout from './Logout'
 
 class PlayerReady extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = {}
   }
 
   render() { 
@@ -32,9 +33,13 @@ class PlayerReady extends Component {
 
     this.props.fillAnswersHands(this.props.players.currentPlayersTurn, thisHand)
   }}>Let's Go</button></Link>
+
+<div>
+  <Logout />
+</div>
 </div>
 
-     );
+    );
   }
 }
 

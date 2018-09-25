@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {selectQuestion, setNumberOfPlayers} from '../actions/index'
-import {bindActionCreators} from 'redux'
+import { selectQuestion, setNumberOfPlayers } from '../actions/index'
+import { bindActionCreators } from 'redux'
+
+import Logout from './Logout'
 
 class StartGame extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-     }
+    this.state = {
+    }
   }
 
 
@@ -35,14 +37,22 @@ class StartGame extends Component {
               <input id='playerCount' type='text' name='playerCount'/>
               <button type='submit'>Start</button>
             </form>
-
+          <div>
+            <Logout />
+          </div>
         </div>
 
       </div>  
     )}
+  }
+
+function setPlayers() {
+  console.log('fsdf', playerNumber)
+  let playerNumber = document.getElementById['player-number'].value;
+  console.log('p', playerNumber)
 }
 
- 
+
 function mapStateToProps(state) {
   return {
     questions: state.questions,
@@ -57,4 +67,4 @@ function mapDispatchToProps(dispatch) {
   }, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(StartGame) ;
+export default connect(mapStateToProps, mapDispatchToProps)(StartGame);
