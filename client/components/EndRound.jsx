@@ -27,7 +27,7 @@ class EndRound extends Component {
 
 
   render() { 
-    console.log(this.state)
+    console.log('hi', this.props.answers)
     let selected = 0;
 
     return ( 
@@ -44,7 +44,7 @@ class EndRound extends Component {
 
   <Question />
 
-  {this.state.message.map(answer => {
+  {/* {this.state.message.map(answer => {
   return <ul 
   className='hiddenanswer' ><input type='radio' name='answer' value={answer.value} id='' 
   onClick={(e) => selected = e.target.value}/>
@@ -52,9 +52,17 @@ class EndRound extends Component {
 
   <label for="answer" style={{filter: 'blur(5px)'}}
   onClick={(e)=> {e.target.style.filter = 'blur(0px)'}}>{answer.color}</label></ul>})
+} */}
+
+ {this.props.answers.map(answer => {
+   console.log('jhsfjkfsdkjlsdfjlk', answer)
+  return <ul 
+  className='hiddenanswer' ><input type='radio' name='answer' value={answer.player} id='' 
+  onClick={(e) => selected = e.target.value} />
+
+  <label for="answer" style={{filter: 'blur(5px)'}}
+  onClick={(e)=> {e.target.style.filter = 'blur(0px)'}}>{answer.cardText}</label></ul>})
 }
-
-
 
 {/* /* <ul>answers 1 hidden</ul>
 <ul>'this.props.toBeJudged'</ul>
@@ -81,7 +89,8 @@ onClick={() => {
 function mapStateToProps(state) {
   return{
     judge: state.currentJudge,
-    players: state.players.numOfPlayers
+    players: state.players.numOfPlayers,
+    answers: state.answers.toBeJudged
   }
 }
 
