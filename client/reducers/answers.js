@@ -1,4 +1,4 @@
-// import cards from '../../server/db.json'
+import cards from '../../server/db.json'
 // const answerCards = cards.whiteCards
 
 const initialState =        
